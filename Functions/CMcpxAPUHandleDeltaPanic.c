@@ -1,0 +1,4 @@
+void CMcpxAPU::HandleDeltaPanic()
+{
+  ;
+}

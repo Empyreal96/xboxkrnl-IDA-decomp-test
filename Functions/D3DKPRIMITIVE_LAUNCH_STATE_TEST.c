@@ -1,0 +1,5 @@
+void D3DK::PRIMITIVE_LAUNCH_STATE_TEST()
+{
+  if ( D3D__Parser )
+    D3DK::PARSE_PUSH_BUFFER();
+}

@@ -1,0 +1,44 @@
+int __stdcall _aulldvrm(unsigned __int64 a1, __int64 a2)
+{
+  unsigned __int64 v2; // rtt
+  int v3; // esi
+  unsigned int v4; // ecx
+  unsigned int v5; // ebx
+  unsigned __int64 v6; // rax
+  unsigned __int8 v7; // cf
+  unsigned int v8; // eax
+  int v9; // ecx
+  unsigned __int64 v10; // rax
+
+  if ( HIDWORD(a2) )
+  {
+    v4 = HIDWORD(a2);
+    v5 = a2;
+    v6 = a1;
+    do
+    {
+      v7 = v4 & 1;
+      v4 >>= 1;
+      v5 = __RCR__(v5, v7);
+      v7 = BYTE4(v6) & 1;
+      HIDWORD(v6) >>= 1;
+      LODWORD(v6) = __RCR__(v6, v7);
+    }
+    while ( v4 );
+    v8 = v6 / v5;
+    v3 = v8;
+    v9 = HIDWORD(a2) * v8;
+    v10 = v8 * (unsigned __int64)(unsigned int)a2;
+    v7 = __CFADD__(v9, HIDWORD(v10));
+    HIDWORD(v10) += v9;
+    if ( v7 || HIDWORD(v10) > HIDWORD(a1) || HIDWORD(v10) >= HIDWORD(a1) && (unsigned int)v10 > (unsigned int)a1 )
+      --v3;
+  }
+  else
+  {
+    LODWORD(v2) = a1;
+    HIDWORD(v2) = HIDWORD(a1) % (unsigned int)a2;
+    v3 = v2 / (unsigned int)a2;
+  }
+  return v3;
+}

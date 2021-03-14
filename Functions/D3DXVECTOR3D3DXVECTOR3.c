@@ -1,0 +1,4 @@
+void D3DXVECTOR3::D3DXVECTOR3()
+{
+  ;
+}
