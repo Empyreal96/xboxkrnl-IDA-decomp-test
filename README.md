@@ -3,9 +3,9 @@
 ### NOTES
 
 - Used the available `xboxkrnl.exe + xboxkrnl.pdb` version 5933, Google will help you find these
-- This is MAINLY FOR MY OUR LEARNING, Most likely useless to most people
+- This is MAINLY FOR MY OWN LEARNING, Most likely useless to most people
 - This is just 'psudocode' from Hex-Rays Decompiler outputted as-is.
-- Every 'function' I could view Psudocode to was made into a .c file
+- Every 'function' in IDA I could view Psudocode to was made into a .c file
 - The Dissassembled code from IDA is in the .asm files
 
 
